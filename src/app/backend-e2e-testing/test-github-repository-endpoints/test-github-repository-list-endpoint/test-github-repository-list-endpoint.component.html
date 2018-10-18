@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Type</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let githubRepository of githubRepositories | async">
+      <td class="github-repository-id">{{ githubRepository.id }}</td>
+      <td class="data-type">{{ githubRepository.type }}</td>
+      <td class="github-repository-name">{{ githubRepository.attributes.name }}</td>
+    </tr>
+  </tbody>
+</table>

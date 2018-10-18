@@ -1,0 +1,10 @@
+<div class="match-id">{{match.data.id}}</div>
+<div class="data-type">{{match.data.type}}</div>
+<div class="match-status">{{match.data.attributes.status}}</div>
+<div class="match-type">{{match.data.attributes.type}}</div>
+
+<div class="match-participant" *ngFor="let participant of match.data.relationships.participants.data">
+  <div class="match-participant-id">{{participant.id}}</div>
+  <div class="match-participant-path">{{participant.attributes.path}}</div>
+  <div class="match-participant-data-type">{{participant.type}}</div>
+</div>
