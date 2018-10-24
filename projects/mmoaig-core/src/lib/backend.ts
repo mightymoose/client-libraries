@@ -1,9 +1,11 @@
 enum EndpointUrl {
-    BotEndpointUrl =              'v1/bots',
-    UserEndpointUrl =             'v1/users',
-    GithubRepositoryEndpointUrl = 'v1/github-repositories',
-    GithubUserEndpointUrl =       'v1/github-users',
-    MatchEndpointUrl =            'v1/matches'
+    BotEndpointUrl =                    'v1/bots',
+    UserEndpointUrl =                   'v1/users',
+    GithubRepositoryEndpointUrl =       'v1/github-repositories',
+    GithubUserEndpointUrl =             'v1/github-users',
+    MatchEndpointUrl =                  'v1/matches',
+    MatchInstanceEndpointUrl =          'v1/match-instances',
+    RockPaperScissorsRoundEndpointUrl = 'v1/rock-paper-scissors-rounds'
 }
 
 export interface JSONAPIResourceObject<T, A, R> {
@@ -67,6 +69,33 @@ export type BackendMatch = JSONAPIResourceObject<'matches', BackendMatchAttribut
 export type BackendMatchListResponse = JSONAPIListResponse<'matches', BackendMatchAttributes, never>;
 export type BackendMatchResponse = JSONAPIResponse<'matches', BackendMatchAttributes, never>;
 
+export enum BackendRockPaperScissorsThrow {
+    Rock =     'RockPaperScissorsRock',
+    Paper =    'RockPaperScissorsPaper',
+    Scissors = 'RockPaperScissorsScissors'
+}
+
+export interface BackendRockPaperScissorsRoundAttributes {
+    firstPlayerThrow: BackendRockPaperScissorsThrow;
+    secondPlayerThrow: BackendRockPaperScissorsThrow;
+    roundNumber: number;
+}
+
+export type BackendRockPaperScissorsRound =
+    JSONAPIResourceObject<'rock_paper_scissors_rounds', BackendRockPaperScissorsRoundAttributes, never>;
+export type BackendRockPaperScissorsRoundListResponse =
+    JSONAPIListResponse<'rock_paper_scissors_rounds', BackendRockPaperScissorsRoundAttributes, never>;
+export type BackendRockPaperScissorsRoundResponse =
+    JSONAPIResponse<'rock_paper_scissors_rounds', BackendRockPaperScissorsRoundAttributes, never>;
+
+export interface BackendMatchInstanceAttributes {
+    readonly matchInstanceToken: string;
+}
+
+export type BackendMatchInstance = JSONAPIResourceObject<'match_instances', BackendMatchInstanceAttributes, never>;
+export type BackendMatchInstanceListResponse = JSONAPIListResponse<'match_instances', BackendMatchInstanceAttributes, never>;
+export type BackendMatchInstanceResponse = JSONAPIResponse<'match_instances', BackendMatchInstanceAttributes, never>;
+
 export enum BackendMatchType {
     RockPaperScissors = 'RockPaperScissors'
 }
@@ -90,6 +119,10 @@ export const MatchEndpoint: Endpoint<'matches', BackendMatchAttributes, never> =
     url: EndpointUrl.MatchEndpointUrl
 };
 
+export const MatchInstanceEndpoint: Endpoint<'match_instances', BackendMatchInstanceAttributes, never> = {
+    url: EndpointUrl.MatchInstanceEndpointUrl
+};
+
 export const UserEndpoint: Endpoint<'users', BackendUserAttributes, never> = {
     url: EndpointUrl.UserEndpointUrl
 };
@@ -100,4 +133,8 @@ export const GithubRepositoryEndpoint: Endpoint<'github_repositories', BackendGi
 
 export const GithubUserEndpoint: Endpoint<'github_users', BackendGithubUserAttributes, never> = {
     url: EndpointUrl.GithubUserEndpointUrl
+};
+
+export const RockPaperScissorsRoundEndpoint: Endpoint<'rock_paper_scissors_rounds', BackendRockPaperScissorsRoundAttributes, never> = {
+    url: EndpointUrl.RockPaperScissorsRoundEndpointUrl
 };

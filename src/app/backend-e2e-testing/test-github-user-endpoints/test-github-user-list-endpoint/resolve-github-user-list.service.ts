@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BackendGithubUserListResponse, BackendService } from 'mmoaig-core';
 import { Resolve } from '@angular/router';
 import { Observable } from 'rxjs';
-import { GithubUserEndpoint } from 'projects/mmoaig-core/src/public_api';
+import { GithubUserEndpoint } from 'mmoaig-core';
 
 @Injectable({
   providedIn: 'root'

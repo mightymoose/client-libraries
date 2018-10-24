@@ -6,6 +6,10 @@ export class TestBackend {
         return $('#test-match-endpoints-link');
     }
 
+    static get testMatchInstanceEndpointsLink(): ElementFinder {
+        return $('#test-match-instance-endpoints-link');
+    }
+
     static get testBotEndpointsLink(): ElementFinder {
         return $('#test-bot-endpoints-link');
     }
@@ -20,6 +24,10 @@ export class TestBackend {
 
     static get testGithubRepositoryEndpointsLink(): ElementFinder {
         return $('#test-github-repository-endpoints-link');
+    }
+
+    static get testRockPaperScissorsRoundEndpointsLink(): ElementFinder {
+        return $('#test-rock-paper-scissors-round-endpoints-link');
     }
 
     static async load() {

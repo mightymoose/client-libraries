@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let round of rockPaperScissorsRounds | async">
+      <td class='rock-paper-scissors-round-id'>{{round.id}}</td>
+      <td class='data-type'>{{round.type}}</td>
+      <td class='rock-paper-scissors-first-player-throw'>{{round.attributes.firstPlayerThrow}}</td>
+      <td class='rock-paper-scissors-second-player-throw'>{{round.attributes.secondPlayerThrow}}</td>
+      <td class='rock-paper-scissors-round-number'>{{round.attributes.roundNumber}}</td>
+    </tr>
+  </tbody>
+</table>

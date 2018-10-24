@@ -6,8 +6,8 @@ describe('the match list endpoint', () => {
     });
 
     it('includes the match ids', async () => {
-        const userIDs = await TestMatchListEndpoint.botIDs();
-        expect(userIDs).toEqual([
+        const matchIDs = await TestMatchListEndpoint.matchIDs();
+        expect(matchIDs).toEqual([
             '1',
             '2',
             '3',

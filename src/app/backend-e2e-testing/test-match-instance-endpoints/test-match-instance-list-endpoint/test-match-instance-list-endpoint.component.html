@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let matchInstance of matchInstances | async">
+      <td class='match-instance-id'>{{matchInstance.id}}</td>
+      <td class='data-type'>{{matchInstance.type}}</td>
+      <td class='match-instance-token'>{{matchInstance.attributes.matchInstanceToken}}</td>
+    </tr>
+  </tbody>
+</table>

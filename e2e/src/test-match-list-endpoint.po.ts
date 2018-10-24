@@ -11,7 +11,7 @@ export class TestMatchListEndpoint {
         return await $$('.match-type').getText();
     }
 
-    static async botIDs() {
+    static async matchIDs() {
         return await $$('.match-id').getText();
     }
 

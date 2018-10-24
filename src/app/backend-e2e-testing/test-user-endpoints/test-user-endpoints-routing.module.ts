@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TestUserListEndpointComponent } from './test-user-list-endpoint/test-user-list-endpoint.component';
 import { TestUserEndpointsComponent } from './test-user-endpoints/test-user-endpoints.component';
-import { ResolveUserListService } from './resolve-user-list.service';
+import { ResolveUserListService } from './test-user-list-endpoint/resolve-user-list.service';
 
 const routes: Routes = [{
   path: '',

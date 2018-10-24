@@ -20,6 +20,13 @@ const routes: Routes = [{
   }, {
     path: 'test-match-endpoints',
     loadChildren: './test-match-endpoints/test-match-endpoints.module#TestMatchEndpointsModule'
+  }, {
+    path: 'test-match-instance-endpoints',
+    loadChildren: './test-match-instance-endpoints/test-match-instance-endpoints.module#TestMatchInstanceEndpointsModule'
+  }, {
+    path: 'test-rock-paper-scissors-round-endpoints',
+    loadChildren: './test-rock-paper-scissors-round-endpoints' +
+      '/test-rock-paper-scissors-round-endpoints.module#TestRockPaperScissorsRoundEndpointsModule'
   }]
 }];
 

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BackendMatchResponse, BackendService } from 'mmoaig-core';
 import { Resolve } from '@angular/router';
 import { Observable } from 'rxjs';
-import { MatchEndpoint } from 'projects/mmoaig-core/src/public_api';
+import { MatchEndpoint } from 'mmoaig-core';
 
 @Injectable({
   providedIn: 'root'
