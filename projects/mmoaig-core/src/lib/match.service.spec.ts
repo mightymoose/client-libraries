@@ -22,7 +22,7 @@ describe('MatchService', () => {
     expect(service).toBeTruthy();
   });
 
-  describe('.source', () => {
+  describe('.next', () => {
     let expectedResult: Observable<BackendMatchResponse>;
     let result: Observable<BackendMatchResponse>;
 

@@ -1,7 +1,7 @@
 import { $$ } from 'protractor';
 import { TestMatchInstanceEndpoints } from './test-match-instance-endpoints.po';
 
-export class TestMatchInstanceListEndpoint {
+export class TestMatchInstancesForMatchEndpoint {
 
     static async matchInstanceIDs() {
         return await $$('.match-instance-id').getText();
@@ -17,6 +17,6 @@ export class TestMatchInstanceListEndpoint {
 
     static async load() {
         await TestMatchInstanceEndpoints.load();
-        await TestMatchInstanceEndpoints.testMatchInstanceListEndpointLink.click();
+        await TestMatchInstanceEndpoints.testMatchInstancesForMatchEndpointLink.click();
     }
 }

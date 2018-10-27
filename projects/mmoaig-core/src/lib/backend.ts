@@ -1,4 +1,4 @@
-enum EndpointUrl {
+export enum EndpointUrl {
     BotEndpointUrl =                    'v1/bots',
     UserEndpointUrl =                   'v1/users',
     GithubRepositoryEndpointUrl =       'v1/github-repositories',
