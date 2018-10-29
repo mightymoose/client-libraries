@@ -8,3 +8,4 @@ export * from './lib/backend';
 export * from './lib/bot.service';
 export * from './lib/match.service';
 export * from './lib/match-instance.service';
+export * from './lib/match-participation.service';

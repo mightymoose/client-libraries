@@ -10,6 +10,10 @@ export class TestBackend {
         return $('#test-match-instance-endpoints-link');
     }
 
+    static get testMatchParticipationEndpointsLink(): ElementFinder {
+        return $('#test-match-participation-endpoints-link');
+    }
+
     static get testBotEndpointsLink(): ElementFinder {
         return $('#test-bot-endpoints-link');
     }

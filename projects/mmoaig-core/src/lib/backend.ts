@@ -4,6 +4,7 @@ export enum EndpointUrl {
     GithubRepositoryEndpointUrl =       'v1/github-repositories',
     GithubUserEndpointUrl =             'v1/github-users',
     MatchEndpointUrl =                  'v1/matches',
+    MatchParticipationUrl =             'v1/match-participation',
     MatchInstanceEndpointUrl =          'v1/match-instances',
     RockPaperScissorsRoundEndpointUrl = 'v1/rock-paper-scissors-rounds'
 }
@@ -69,6 +70,15 @@ export type BackendMatch = JSONAPIResourceObject<'matches', BackendMatchAttribut
 export type BackendMatchListResponse = JSONAPIListResponse<'matches', BackendMatchAttributes, never>;
 export type BackendMatchResponse = JSONAPIResponse<'matches', BackendMatchAttributes, never>;
 
+export interface BackendMatchParticipationAttributes {
+    readonly botId:   number;
+    readonly matchId: number;
+}
+
+export type BackendMatchParticipation = JSONAPIResourceObject<'match_participation', BackendMatchParticipationAttributes, never>;
+export type BackendMatchParticipationListResponse = JSONAPIListResponse<'match_participation', BackendMatchParticipationAttributes, never>;
+export type BackendMatchParticipationResponse = JSONAPIResponse<'match_participation', BackendMatchParticipationAttributes, never>;
+
 export enum BackendRockPaperScissorsThrow {
     Rock =     'RockPaperScissorsRock',
     Paper =    'RockPaperScissorsPaper',
@@ -117,6 +127,10 @@ export const BotEndpoint: Endpoint<'bots', BackendBotAttributes, never> = {
 
 export const MatchEndpoint: Endpoint<'matches', BackendMatchAttributes, never> = {
     url: EndpointUrl.MatchEndpointUrl
+};
+
+export const MatchParticipationEndpoint: Endpoint<'match_participation', BackendMatchParticipationAttributes, never> = {
+    url: EndpointUrl.MatchParticipationUrl
 };
 
 export const MatchInstanceEndpoint: Endpoint<'match_instances', BackendMatchInstanceAttributes, never> = {

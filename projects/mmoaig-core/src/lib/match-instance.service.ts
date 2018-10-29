@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpParams } from '@angular/common/http';
 
 import { ApiService } from './api.service';
-import { BackendMatchInstanceListResponse, EndpointUrl } from './backend';
+import { BackendMatchInstanceListResponse, EndpointUrl, BackendMatchInstanceResponse } from './backend';
 
 @Injectable({
     providedIn: 'root'
@@ -14,5 +14,9 @@ export class MatchInstanceService {
     forMatch(matchId: number): Observable<BackendMatchInstanceListResponse> {
         const params: HttpParams = new HttpParams().set('filter[matchId]', String(matchId));
         return this.apiService.get(EndpointUrl.MatchInstanceEndpointUrl, {params});
+    }
+
+    mostRecentForMatch(matchId: number): Observable<BackendMatchInstanceResponse> {
+        return this.apiService.get(`${EndpointUrl.MatchEndpointUrl}/${matchId}/currentInstance`);
     }
 }

@@ -24,6 +24,9 @@ const routes: Routes = [{
     path: 'test-match-instance-endpoints',
     loadChildren: './test-match-instance-endpoints/test-match-instance-endpoints.module#TestMatchInstanceEndpointsModule'
   }, {
+    path: 'test-match-participation-endpoints',
+    loadChildren: './test-match-participation-endpoints/test-match-participation-endpoints.module#TestMatchParticipationEndpointsModule'
+  }, {
     path: 'test-rock-paper-scissors-round-endpoints',
     loadChildren: './test-rock-paper-scissors-round-endpoints' +
       '/test-rock-paper-scissors-round-endpoints.module#TestRockPaperScissorsRoundEndpointsModule'

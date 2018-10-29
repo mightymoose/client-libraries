@@ -1,11 +1,11 @@
 import { Observable, of } from 'rxjs';
-import { BackendMatchInstanceListResponse, EndpointUrl, BackendMatchInstanceResponse } from './backend';
+import { BackendMatchParticipationListResponse, EndpointUrl, BackendMatchParticipationResponse } from './backend';
 import { ApiService } from './api.service';
 import { TestBed } from '@angular/core/testing';
-import { MatchInstanceService } from './match-instance.service';
+import { MatchParticipationService } from './match-participation.service';
 import { HttpParams } from '@angular/common/http';
 
-describe('MatchInstanceService', () => {
+describe('MatchParticipationService', () => {
     let mockApiService: jasmine.SpyObj<ApiService>;
 
     beforeEach(() => {
@@ -20,15 +20,15 @@ describe('MatchInstanceService', () => {
 
     describe('.forMatch', () => {
         let matchId: number;
-        let expectedResult: Observable<BackendMatchInstanceListResponse>;
-        let result: Observable<BackendMatchInstanceListResponse>;
+        let expectedResult: Observable<BackendMatchParticipationListResponse>;
+        let result: Observable<BackendMatchParticipationListResponse>;
 
         beforeEach(() => {
             matchId = Math.random();
             expectedResult = of({
                 data: []
             });
-            const service: MatchInstanceService = TestBed.get(MatchInstanceService);
+            const service: MatchParticipationService = TestBed.get(MatchParticipationService);
             mockApiService.get.and.returnValue(expectedResult);
             result = service.forMatch(matchId);
         });
@@ -38,7 +38,7 @@ describe('MatchInstanceService', () => {
         });
 
         it('passes the url for the filtered match instances', () => {
-            expect(mockApiService.get.calls.argsFor(0)[0]).toBe(EndpointUrl.MatchInstanceEndpointUrl);
+            expect(mockApiService.get.calls.argsFor(0)[0]).toBe(EndpointUrl.MatchParticipationUrl);
         });
 
         it('adds exactly one query param to the request', () => {
@@ -49,32 +49,6 @@ describe('MatchInstanceService', () => {
         it('adds the query param for filtering by matchId to the request', () => {
             const params: HttpParams = mockApiService.get.calls.argsFor(0)[1].params;
             expect(params.get('filter[matchId]')).toBe(String(matchId));
-        });
-
-        it('returns the result of the ApiService.get call', () => {
-            expect(result).toBe(expectedResult);
-        });
-    });
-
-    describe('.mostRecentForMatch', () => {
-        let matchId: number;
-        let expectedResult: Observable<BackendMatchInstanceResponse>;
-        let result: Observable<BackendMatchInstanceResponse>;
-
-        beforeEach(() => {
-            matchId = Math.random();
-            expectedResult = of({data: {id: 1, type: 'match_instances', attributes: {}}} as BackendMatchInstanceResponse);
-            const service: MatchInstanceService = TestBed.get(MatchInstanceService);
-            mockApiService.get.and.returnValue(expectedResult);
-            result = service.mostRecentForMatch(matchId);
-        });
-
-        it('calls ApiService.get exactly once', () => {
-            expect(mockApiService.get).toHaveBeenCalledTimes(1);
-        });
-
-        it('passes the url for the filtered match instances', () => {
-            expect(mockApiService.get).toHaveBeenCalledWith(`${EndpointUrl.MatchEndpointUrl}/${matchId}/currentInstance`);
         });
 
         it('returns the result of the ApiService.get call', () => {

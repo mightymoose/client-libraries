@@ -1,0 +1,12 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let participant of participation | async">
+      <td class="participant-id">{{ participant.id }}</td>
+    </tr>
+  </tbody>
+</table>

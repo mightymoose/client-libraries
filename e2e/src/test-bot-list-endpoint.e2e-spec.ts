@@ -6,8 +6,8 @@ describe('the bot list endpoint', () => {
     });
 
     it('includes the bot ids', async () => {
-        const userIDs = await TestBotListEndpoint.botIDs();
-        expect(userIDs).toEqual([
+        const botIDs = await TestBotListEndpoint.botIDs();
+        expect(botIDs).toEqual([
             '1',
             '2',
             '3',
