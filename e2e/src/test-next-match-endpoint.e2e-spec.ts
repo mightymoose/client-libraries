@@ -41,6 +41,11 @@ describe('next match endpoint', () => {
         expect(matchType).toBe('RockPaperScissors');
     });
 
+    it('includes whether or not the match is rated', async () => {
+        const rated: string = await TestNextMatchEndpoint.rated();
+        expect(rated).toBe('false');
+    });
+
     it('includes the match participants', async () => {
         expect(TestNextMatchEndpoint.participants.count()).toBe(2);
     });

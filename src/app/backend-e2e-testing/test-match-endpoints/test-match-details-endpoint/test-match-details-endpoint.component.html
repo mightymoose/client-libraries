@@ -4,6 +4,7 @@
 <div class="match-type">{{match.data.attributes.type}}</div>
 <div class="created-at">{{match.data.attributes.createdAt | date}}</div>
 <div class="updated-at">{{match.data.attributes.updatedAt | date}}</div>
+<div class="rated">{{ match.data.attributes.rated }}</div>
 
 <div class="match-participant" *ngFor="let participant of match.data.relationships.participants.data">
   <div class="match-participant-id">{{participant.id}}</div>

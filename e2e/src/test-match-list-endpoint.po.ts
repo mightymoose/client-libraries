@@ -27,6 +27,10 @@ export class TestMatchListEndpoint {
         return $$('.updated-at').getText();
     }
 
+    static async rated() {
+        return $$('.rated').getText();
+    }
+
     static async load() {
         await TestMatchEndpoints.load();
         await TestMatchEndpoints.testMatchListEndpointLink.click();

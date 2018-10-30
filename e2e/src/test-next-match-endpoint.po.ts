@@ -31,6 +31,10 @@ export class TestNextMatchEndpoint {
         return $('.updated-at').getText();
     }
 
+    static async rated() {
+        return $('.rated').getText();
+    }
+
     static get participants(): ElementArrayFinder {
         return $$('.match-participant');
     }

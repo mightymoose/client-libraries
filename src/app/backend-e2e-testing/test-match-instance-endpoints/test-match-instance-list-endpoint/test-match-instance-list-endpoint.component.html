@@ -13,7 +13,7 @@
     <tr *ngFor="let matchInstance of matchInstances | async">
       <td class='match-instance-id'>{{matchInstance.id}}</td>
       <td class='data-type'>{{matchInstance.type}}</td>
-      <td class='match-instance-token'>{{matchInstance.attributes.matchInstanceToken}}</td>
+      <td class='match-instance-token'>{{matchInstance.attributes.token}}</td>
       <td class='match-id'>{{matchInstance.attributes.matchId}}</td>
       <td class='created-at'>{{matchInstance.attributes.createdAt | date}}</td>
       <td class='updated-at'>{{matchInstance.attributes.updatedAt | date}}</td>

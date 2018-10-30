@@ -190,4 +190,35 @@ describe('the match list endpoint', () => {
             'Apr 15, 1707'
         ]);
     });
+
+    it('includes whether or not the match is rated', async () => {
+        const rated = await TestMatchListEndpoint.rated();
+        expect(rated).toEqual([
+            'false',
+            'false',
+            'false',
+            'false',
+            'false',
+            'false',
+            'false',
+            'false',
+            'false',
+            'false',
+            'false',
+            'false',
+            'false',
+            'false',
+            'false',
+            'false',
+            'false',
+            'false',
+            'false',
+            'false',
+            'false',
+            'false',
+            'false',
+            'false',
+            'false'
+        ]);
+    });
 });

@@ -39,6 +39,11 @@ describe('the match details endpoint', () => {
         expect(updatedAt).toEqual('Apr 15, 1707');
     });
 
+    it('includes whether or not the match is rated', async () => {
+        const rated = await TestMatchDetailsEndpoint.rated();
+        expect(rated).toEqual('false');
+    });
+
     describe('the participant data', () => {
         it('includes the participant path', async () => {
             const participantPaths = await TestMatchDetailsEndpoint.participantPaths();

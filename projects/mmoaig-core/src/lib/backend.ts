@@ -77,6 +77,7 @@ export interface BackendMatchAttributes {
     readonly type:      BackendMatchType;
     readonly createdAt: string;
     readonly updatedAt: string;
+    readonly rated:     boolean;
 }
 
 export type BackendMatch = JSONAPIResourceObject<'matches', BackendMatchAttributes, never>;
@@ -84,10 +85,11 @@ export type BackendMatchListResponse = JSONAPIListResponse<'matches', BackendMat
 export type BackendMatchResponse = JSONAPIResponse<'matches', BackendMatchAttributes, never>;
 
 export interface BackendMatchParticipationAttributes {
-    readonly botId:   number;
-    readonly matchId: number;
+    readonly botId:     number;
+    readonly matchId:   number;
     readonly createdAt: string;
     readonly updatedAt: string;
+    readonly token:     string;
 }
 
 export type BackendMatchParticipation = JSONAPIResourceObject<'match_participation', BackendMatchParticipationAttributes, never>;
@@ -114,7 +116,10 @@ export type BackendRockPaperScissorsRoundResponse =
     JSONAPIResponse<'rock_paper_scissors_rounds', BackendRockPaperScissorsRoundAttributes, never>;
 
 export interface BackendMatchInstanceAttributes {
-    readonly matchInstanceToken: string;
+    readonly token:     string;
+    readonly matchId:   number;
+    readonly createdAt: string;
+    readonly updatedAt: string;
 }
 
 export type BackendMatchInstance = JSONAPIResourceObject<'match_instances', BackendMatchInstanceAttributes, never>;

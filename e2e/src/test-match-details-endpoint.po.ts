@@ -58,4 +58,8 @@ export class TestMatchDetailsEndpoint {
     static async participantUpdatedAt() {
         return $$('.match-participant-updated-at').getText();
     }
+
+    static async rated() {
+        return $('.rated').getText();
+    }
 }

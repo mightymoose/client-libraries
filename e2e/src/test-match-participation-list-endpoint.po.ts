@@ -26,4 +26,8 @@ export class TestMatchParticipationListEndpoint {
     static async updatedAt() {
         return $$('.updated-at').getText();
     }
+
+    static async tokens() {
+        return $$('.token').getText();
+    }
 }
