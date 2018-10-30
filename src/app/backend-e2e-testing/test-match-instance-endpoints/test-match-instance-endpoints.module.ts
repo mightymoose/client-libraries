@@ -7,12 +7,20 @@ import { TestMatchInstanceEndpointsComponent } from './test-match-instance-endpo
 import {
   TestMatchInstancesForMatchEndpointComponent
 } from './test-match-instances-for-match-endpoint/test-match-instances-for-match-endpoint.component';
+import {
+  TestMostRecentInstanceForMatchEndpointComponent
+} from './test-most-recent-instance-for-match-endpoint/test-most-recent-instance-for-match-endpoint.component';
 
 @NgModule({
   imports: [
     CommonModule,
     TestMatchInstanceEndpointsRoutingModule
   ],
-  declarations: [TestMatchInstanceListEndpointComponent, TestMatchInstanceEndpointsComponent, TestMatchInstancesForMatchEndpointComponent]
+  declarations: [
+    TestMatchInstanceListEndpointComponent,
+    TestMatchInstanceEndpointsComponent,
+    TestMatchInstancesForMatchEndpointComponent,
+    TestMostRecentInstanceForMatchEndpointComponent
+  ]
 })
 export class TestMatchInstanceEndpointsModule { }

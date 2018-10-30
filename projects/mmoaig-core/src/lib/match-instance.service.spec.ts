@@ -74,7 +74,7 @@ describe('MatchInstanceService', () => {
         });
 
         it('passes the url for the filtered match instances', () => {
-            expect(mockApiService.get).toHaveBeenCalledWith(`${EndpointUrl.MatchEndpointUrl}/${matchId}/currentInstance`);
+            expect(mockApiService.get).toHaveBeenCalledWith(`${EndpointUrl.MatchInstanceEndpointUrl}/most-recent-for-match/${matchId}`);
         });
 
         it('returns the result of the ApiService.get call', () => {

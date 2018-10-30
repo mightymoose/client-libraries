@@ -17,6 +17,6 @@ export class MatchInstanceService {
     }
 
     mostRecentForMatch(matchId: number): Observable<BackendMatchInstanceResponse> {
-        return this.apiService.get(`${EndpointUrl.MatchEndpointUrl}/${matchId}/currentInstance`);
+        return this.apiService.get(`${EndpointUrl.MatchInstanceEndpointUrl}/most-recent-for-match/${matchId}`);
     }
 }

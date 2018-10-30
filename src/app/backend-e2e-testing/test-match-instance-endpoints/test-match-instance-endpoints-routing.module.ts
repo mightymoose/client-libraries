@@ -7,6 +7,12 @@ import {
   TestMatchInstancesForMatchEndpointComponent
  } from './test-match-instances-for-match-endpoint/test-match-instances-for-match-endpoint.component';
 import { ResolveMatchInstancesForMatchService } from './test-match-instances-for-match-endpoint/resolve-match-instances-for-match.service';
+import {
+  TestMostRecentInstanceForMatchEndpointComponent
+} from './test-most-recent-instance-for-match-endpoint/test-most-recent-instance-for-match-endpoint.component';
+import {
+  ResolveMostRecentMatchInstanceService
+} from './test-most-recent-instance-for-match-endpoint/resolve-most-recent-match-instance.service';
 
 const routes: Routes = [{
   path: '',
@@ -16,6 +22,12 @@ const routes: Routes = [{
     component: TestMatchInstanceListEndpointComponent,
     resolve: {
       matchInstances: ResolveMatchInstanceListService
+    }
+  }, {
+    path: 'test-most-recent-instance-for-match-endpoint',
+    component: TestMostRecentInstanceForMatchEndpointComponent,
+    resolve: {
+      matchInstance: ResolveMostRecentMatchInstanceService
     }
   }, {
     path: 'test-match-instances-for-match-endpoint',
