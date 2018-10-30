@@ -86,9 +86,14 @@ describe('BackendService', () => {
 
     beforeEach(() => {
       const service: BackendService = TestBed.get(BackendService);
-      expectedResult = of({path: `${Math.random()}`});
+      expectedResult = of({
+        path: `${Math.random()}`,
+        createdAt: new Date().toJSON(),
+        updatedAt: new Date().toJSON(),
+        githubRepositoryId: 1
+      });
       mockApiService.put.and.returnValue(expectedResult);
-      attributes = {path: `${Math.random()}`};
+      attributes = {path: `${Math.random()}`, githubRepositoryId: 1, createdAt: new Date().toJSON(), updatedAt: new Date().toJSON()};
       result = service.update(BotEndpoint, 1, attributes);
     });
 
@@ -122,7 +127,7 @@ describe('BackendService', () => {
         }
       } as BackendBotResponse);
       mockApiService.post.and.returnValue(expectedResult);
-      attributes = {path: `${Math.random()}`};
+      attributes = {path: `${Math.random()}`, githubRepositoryId: 1, createdAt: new Date().toJSON(), updatedAt: new Date().toJSON()};
       result = service.create(BotEndpoint, attributes);
     });
 
