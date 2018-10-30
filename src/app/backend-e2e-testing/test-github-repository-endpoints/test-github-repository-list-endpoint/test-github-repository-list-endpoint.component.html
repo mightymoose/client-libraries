@@ -11,6 +11,9 @@
       <td class="github-repository-id">{{ githubRepository.id }}</td>
       <td class="data-type">{{ githubRepository.type }}</td>
       <td class="github-repository-name">{{ githubRepository.attributes.name }}</td>
+      <td class="created-at">{{ githubRepository.attributes.createdAt | date }}</td>
+      <td class="updated-at">{{ githubRepository.attributes.updatedAt | date }}</td>
+      <td class="github-user-id">{{ githubRepository.attributes.githubUserId }}</td>
     </tr>
   </tbody>
 </table>

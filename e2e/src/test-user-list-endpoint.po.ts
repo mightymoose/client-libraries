@@ -19,6 +19,14 @@ export class TestUserListEndpoint {
         return await $$('.data-type').getText();
     }
 
+    static async createdAt() {
+        return await $$('.created-at').getText();
+    }
+
+    static async updatedAt() {
+        return await $$('.updated-at').getText();
+    }
+
     static async load() {
         await TestUserEndpoints.load();
         await TestUserEndpoints.testUserListEndpointLink.click();

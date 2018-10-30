@@ -29,6 +29,16 @@ describe('the match details endpoint', () => {
         expect(TestMatchDetailsEndpoint.participants.count()).toBe(2);
     });
 
+    it('includes the match creation date', async () => {
+        const createdAt = await TestMatchDetailsEndpoint.createdAt();
+        expect(createdAt).toEqual('Apr 15, 1707');
+    });
+
+    it('includes the last update date for the match', async () => {
+        const updatedAt = await TestMatchDetailsEndpoint.updatedAt();
+        expect(updatedAt).toEqual('Apr 15, 1707');
+    });
+
     describe('the participant data', () => {
         it('includes the participant path', async () => {
             const participantPaths = await TestMatchDetailsEndpoint.participantPaths();
@@ -43,6 +53,21 @@ describe('the match details endpoint', () => {
         it('includes the participant data type', async () => {
             const participantDataTypes = await TestMatchDetailsEndpoint.participantDataTypes();
             expect(participantDataTypes).toEqual(['bots', 'bots']);
+        });
+
+        it('includes when the participants was created', async () => {
+            const participantCreatedAt = await TestMatchDetailsEndpoint.participantCreatedAt();
+            expect(participantCreatedAt).toEqual(['Apr 15, 1707', 'Apr 15, 1707']);
+        });
+
+        it('includes when the participant was last updated', async () => {
+            const participantUpdatedAt = await TestMatchDetailsEndpoint.participantUpdatedAt();
+            expect(participantUpdatedAt).toEqual(['Apr 15, 1707', 'Apr 15, 1707']);
+        });
+
+        it('includes the repoaitory id for the participant', async () => {
+            const participantRepositoryIDs = await TestMatchDetailsEndpoint.participantGithubRepositoryIds();
+            expect(participantRepositoryIDs).toEqual(['1', '1']);
         });
     });
 });

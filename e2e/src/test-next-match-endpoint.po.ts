@@ -23,6 +23,14 @@ export class TestNextMatchEndpoint {
         return $('.match-type').getText();
     }
 
+    static async createdAt() {
+        return $('.created-at').getText();
+    }
+
+    static async updatedAt() {
+        return $('.updated-at').getText();
+    }
+
     static get participants(): ElementArrayFinder {
         return $$('.match-participant');
     }
@@ -37,5 +45,17 @@ export class TestNextMatchEndpoint {
 
     static async participantPaths() {
         return $$('.match-participant-path').getText();
+    }
+
+    static async participantGithubRepositoryIds() {
+        return $$('.match-participant-github-repository-id').getText();
+    }
+
+    static async participantCreatedAt() {
+        return $$('.match-participant-created-at').getText();
+    }
+
+    static async participantUpdatedAt() {
+        return $$('.match-participant-updated-at').getText();
     }
 }

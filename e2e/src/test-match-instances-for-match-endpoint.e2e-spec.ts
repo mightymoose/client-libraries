@@ -97,4 +97,99 @@ describe('the match instance for matches endpoint', () => {
             'match_instances'
         ]);
     });
+
+
+    it('includes the created at date', async () => {
+        const createdAt = await TestMatchInstancesForMatchEndpoint.createdAt();
+        expect(createdAt).toEqual([
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+        ]);
+    });
+
+    it('includes the updated at date', async () => {
+        const updatedAt = await TestMatchInstancesForMatchEndpoint.updatedAt();
+        expect(updatedAt).toEqual([
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707'
+        ]);
+    });
+
+
+    it('includes the match IDs', async () => {
+        const matchIDs = await TestMatchInstancesForMatchEndpoint.matchIDs();
+        expect(matchIDs).toEqual([
+            '3',
+            '3',
+            '3',
+            '3',
+            '3',
+            '3',
+            '3',
+            '3',
+            '3',
+            '3',
+            '3',
+            '3',
+            '3',
+            '3',
+            '3',
+            '3',
+            '3',
+            '3',
+            '3',
+            '3',
+            '3',
+            '3',
+            '3',
+            '3',
+            '3'
+        ]);
+    });
 });

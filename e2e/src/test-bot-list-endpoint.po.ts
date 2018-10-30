@@ -11,6 +11,18 @@ export class TestBotListEndpoint {
         return await $$('.bot-id').getText();
     }
 
+    static async createdAt() {
+        return await $$('.created-at').getText();
+    }
+
+    static async updatedAt() {
+        return await $$('.updated-at').getText();
+    }
+
+    static async botRepositoryIds() {
+        return await $$('.bot-repository-id').getText();
+    }
+
     static async dataTypes() {
         return await $$('.data-type').getText();
     }

@@ -2,9 +2,14 @@
 <div class="data-type">{{match.data.type}}</div>
 <div class="match-status">{{match.data.attributes.status}}</div>
 <div class="match-type">{{match.data.attributes.type}}</div>
+<div class="created-at">{{match.data.attributes.createdAt | date}}</div>
+<div class="updated-at">{{match.data.attributes.updatedAt | date}}</div>
 
 <div class="match-participant" *ngFor="let participant of match.data.relationships.participants.data">
   <div class="match-participant-id">{{participant.id}}</div>
   <div class="match-participant-path">{{participant.attributes.path}}</div>
+  <div class="match-participant-created-at">{{participant.attributes.createdAt | date}}</div>
+  <div class="match-participant-updated-at">{{participant.attributes.updatedAt | date}}</div>
+  <div class="match-participant-github-repository-id">{{participant.attributes.githubRepositoryId}}</div>
   <div class="match-participant-data-type">{{participant.type}}</div>
 </div>

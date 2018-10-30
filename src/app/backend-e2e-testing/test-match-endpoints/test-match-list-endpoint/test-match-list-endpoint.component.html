@@ -13,6 +13,8 @@
       <td class="data-type">{{ match.type }}</td>
       <td class="match-type">{{ match.attributes.type }}</td>
       <td class="match-status">{{ match.attributes.status }}</td>
+      <td class="created-at">{{ match.attributes.createdAt | date }}</td>
+      <td class="updated-at">{{ match.attributes.updatedAt | date }}</td>
     </tr>
   </tbody>
 </table>

@@ -97,4 +97,97 @@ describe('the bot list endpoint', () => {
             'bot_path #25'
         ]);
     });
+
+    it('includes the created at date', async () => {
+        const createdAt = await TestBotListEndpoint.createdAt();
+        expect(createdAt).toEqual([
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+        ]);
+    });
+
+    it('includes the updated at date', async () => {
+        const updatedAt = await TestBotListEndpoint.updatedAt();
+        expect(updatedAt).toEqual([
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707'
+        ]);
+    });
+
+    it('includes the github repository ids', async () => {
+        const updatedAt = await TestBotListEndpoint.botRepositoryIds();
+        expect(updatedAt).toEqual([
+            '1',
+            '1',
+            '1',
+            '4',
+            '5',
+            '6',
+            '7',
+            '8',
+            '9',
+            '10',
+            '11',
+            '12',
+            '13',
+            '14',
+            '15',
+            '16',
+            '17',
+            '18',
+            '19',
+            '20',
+            '21',
+            '22',
+            '23',
+            '24',
+            '25'
+        ]);
+    });
 });

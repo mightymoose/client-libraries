@@ -19,6 +19,14 @@ export class TestMatchListEndpoint {
         return await $$('.data-type').getText();
     }
 
+    static async createdAt() {
+        return $$('.created-at').getText();
+    }
+
+    static async updatedAt() {
+        return $$('.updated-at').getText();
+    }
+
     static async load() {
         await TestMatchEndpoints.load();
         await TestMatchEndpoints.testMatchListEndpointLink.click();

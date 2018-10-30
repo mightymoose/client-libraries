@@ -159,4 +159,128 @@ describe('the rock paper scissors list endpoint', () => {
             '1',
         ]);
     });
+
+    it('includes the match instance ids', async () => {
+        const matchInstanceIds = await TestRockPaperScissorsRoundListEndpoint.matchInstanceId();
+        expect(matchInstanceIds).toEqual([
+            '1',
+            '2',
+            '3',
+            '4',
+            '5',
+            '6',
+            '7',
+            '8',
+            '9',
+            '10',
+            '11',
+            '12',
+            '13',
+            '14',
+            '15',
+            '16',
+            '17',
+            '18',
+            '19',
+            '20',
+            '21',
+            '22',
+            '23',
+            '24',
+            '25'
+        ]);
+    });
+
+    it('includes the match winner ids', async () => {
+        const matchWinnerIds = await TestRockPaperScissorsRoundListEndpoint.roundWinnerId();
+        expect(matchWinnerIds).toEqual([
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1'
+        ]);
+    });
+
+    it('includes the created at dates', async () => {
+        const createdAt = await TestRockPaperScissorsRoundListEndpoint.createdAt();
+        expect(createdAt).toEqual([
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707'
+        ]);
+    });
+
+    it('includes the updated at dates', async () => {
+        const updatedAt = await TestRockPaperScissorsRoundListEndpoint.updatedAt();
+        expect(updatedAt).toEqual([
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707'
+        ]);
+    });
 });

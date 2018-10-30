@@ -29,7 +29,10 @@ export interface Endpoint<T, A, R> {
 }
 
 export interface BackendBotAttributes {
-    readonly path: string;
+    readonly path:               string;
+    readonly githubRepositoryId: number;
+    readonly createdAt:          string;
+    readonly updatedAt:          string;
 }
 
 export type BackendBot = JSONAPIResourceObject<'bots', BackendBotAttributes, never>;
@@ -37,8 +40,10 @@ export type BackendBotListResponse = JSONAPIListResponse<'bots', BackendBotAttri
 export type BackendBotResponse = JSONAPIResponse<'bots', BackendBotAttributes, never>;
 
 export interface BackendUserAttributes {
-    readonly username: string;
-    readonly active:   boolean;
+    readonly username:  string;
+    readonly active:    boolean;
+    readonly createdAt: string;
+    readonly updatedAt: string;
 }
 
 export type BackendUser = JSONAPIResourceObject<'users', BackendUserAttributes, never>;
@@ -46,7 +51,10 @@ export type BackendUserListResponse = JSONAPIListResponse<'users', BackendUserAt
 export type BackendUserResponse = JSONAPIResponse<'users', BackendUserAttributes, never>;
 
 export interface BackendGithubRepositoryAttributes {
-    readonly name: string;
+    readonly name:         string;
+    readonly createdAt:    string;
+    readonly updatedAt:    string;
+    readonly githubUserId: number;
 }
 
 export type BackendGithubRepository = JSONAPIResourceObject<'github_repositories', BackendGithubRepositoryAttributes, never>;
@@ -55,6 +63,9 @@ export type BackendGithubRepositoryResponse = JSONAPIResponse<'github_repositori
 
 export interface BackendGithubUserAttributes {
     readonly username: string;
+    readonly createdAt: string;
+    readonly updatedAt: string;
+    readonly userId:    number;
 }
 
 export type BackendGithubUser = JSONAPIResourceObject<'github_users', BackendGithubUserAttributes, never>;
@@ -62,8 +73,10 @@ export type BackendGithubUserListResponse = JSONAPIListResponse<'github_users', 
 export type BackendGithubUserResponse = JSONAPIResponse<'github_users', BackendGithubUserAttributes, never>;
 
 export interface BackendMatchAttributes {
-    readonly status: BackendMatchStatus;
-    readonly type:   BackendMatchType;
+    readonly status:    BackendMatchStatus;
+    readonly type:      BackendMatchType;
+    readonly createdAt: string;
+    readonly updatedAt: string;
 }
 
 export type BackendMatch = JSONAPIResourceObject<'matches', BackendMatchAttributes, never>;
@@ -73,6 +86,8 @@ export type BackendMatchResponse = JSONAPIResponse<'matches', BackendMatchAttrib
 export interface BackendMatchParticipationAttributes {
     readonly botId:   number;
     readonly matchId: number;
+    readonly createdAt: string;
+    readonly updatedAt: string;
 }
 
 export type BackendMatchParticipation = JSONAPIResourceObject<'match_participation', BackendMatchParticipationAttributes, never>;

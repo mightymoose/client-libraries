@@ -97,4 +97,97 @@ describe('the github respository list endpoint', () => {
              'fake_repo #25'
         ]);
     });
+
+    it('includes the github user ids', async () => {
+        const userIDs = await TestGithubRepositoryListEndpoint.githubUserIDs();
+        expect(userIDs).toEqual([
+            '1',
+            '2',
+            '3',
+            '4',
+            '5',
+            '6',
+            '7',
+            '8',
+            '9',
+            '10',
+            '11',
+            '12',
+            '13',
+            '14',
+            '15',
+            '16',
+            '17',
+            '18',
+            '19',
+            '20',
+            '21',
+            '22',
+            '23',
+            '24',
+            '25'
+        ]);
+    });
+
+    it('includes the created at date', async () => {
+        const createdAt = await TestGithubRepositoryListEndpoint.createdAt();
+        expect(createdAt).toEqual([
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+        ]);
+    });
+
+    it('includes the updated at date', async () => {
+        const updatedAt = await TestGithubRepositoryListEndpoint.updatedAt();
+        expect(updatedAt).toEqual([
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707'
+        ]);
+    });
 });

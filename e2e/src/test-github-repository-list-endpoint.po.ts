@@ -14,6 +14,18 @@ export class TestGithubRepositoryListEndpoint {
         return await $$('.data-type').getText();
     }
 
+    static createdAt() {
+        return $$('.created-at').getText();
+    }
+
+    static updatedAt(): any {
+        return $$('.updated-at').getText();
+    }
+
+    static async githubUserIDs() {
+        return await $$('.github-user-id').getText();
+    }
+
     static async load() {
         await TestGithubRepositoryEndpoints.load();
         await TestGithubRepositoryEndpoints.testGithubRepositoryListEndpointLink.click();

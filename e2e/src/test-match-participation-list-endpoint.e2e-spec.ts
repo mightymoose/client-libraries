@@ -35,4 +35,129 @@ describe('the match participation list endpoint', () => {
             '25'
         ]);
     });
+
+    it('returns the bot ids', async () => {
+        const botIDs = await TestMatchParticipationListEndpoint.botIDs();
+        expect(botIDs).toEqual([
+            '2',
+            '3',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1',
+            '1'
+        ]);
+    });
+
+    it('returns the match ids', async () => {
+        const matchIDs = await TestMatchParticipationListEndpoint.matchIDs();
+        expect(matchIDs).toEqual([
+            '1',
+            '1',
+            '2',
+            '2',
+            '3',
+            '3',
+            '4',
+            '4',
+            '5',
+            '5',
+            '6',
+            '6',
+            '7',
+            '7',
+            '8',
+            '8',
+            '9',
+            '9',
+            '10',
+            '10',
+            '11',
+            '11',
+            '12',
+            '12',
+            '13'
+        ]);
+
+    });
+
+    it('returns the created dates for the participations', async () => {
+        const createdAt = await TestMatchParticipationListEndpoint.createdAt();
+        expect(createdAt).toEqual([
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707'
+        ]);
+    });
+
+    it('returns the updated dates for the participations', async () => {
+        const updatedAt = await TestMatchParticipationListEndpoint.updatedAt();
+        expect(updatedAt).toEqual([
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707'
+        ]);
+    });
 });

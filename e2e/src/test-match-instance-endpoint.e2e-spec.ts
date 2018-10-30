@@ -97,4 +97,97 @@ describe('the match instance list endpoint', () => {
             'match_instances',
         ]);
     });
+
+    it('includes the match IDs', async () => {
+        const matchIDs = await TestMatchInstanceListEndpoint.matchIDs();
+        expect(matchIDs).toEqual([
+            '3',
+            '4',
+            '2',
+            '3',
+            '4',
+            '2',
+            '3',
+            '4',
+            '2',
+            '3',
+            '4',
+            '2',
+            '3',
+            '4',
+            '2',
+            '3',
+            '4',
+            '2',
+            '3',
+            '4',
+            '2',
+            '3',
+            '4',
+            '2',
+            '3'
+        ]);
+    });
+
+    it('includes the created at date', async () => {
+        const createdAt = await TestMatchInstanceListEndpoint.createdAt();
+        expect(createdAt).toEqual([
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+        ]);
+    });
+
+    it('includes the updated at date', async () => {
+        const updatedAt = await TestMatchInstanceListEndpoint.updatedAt();
+        expect(updatedAt).toEqual([
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707',
+            'Apr 15, 1707'
+        ]);
+    });
 });

@@ -13,6 +13,8 @@
       <td class="data-type">{{ user.type }}</td>
       <td class="user-username">{{ user.attributes.username }}</td>
       <td class="user-active">{{ user.attributes.active }}</td>
+      <td class="created-at">{{ user.attributes.createdAt | date }}</td>
+      <td class="updated-at">{{ user.attributes.updatedAt | date }}</td>
     </tr>
   </tbody>
 </table>

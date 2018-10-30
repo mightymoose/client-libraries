@@ -2,11 +2,19 @@
   <thead>
     <tr>
       <th>ID</th>
+      <th>Bot ID</th>
+      <th>Match ID</th>
+      <th>Created At</th>
+      <th>Updated At</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let participant of participation | async">
       <td class="participant-id">{{ participant.id }}</td>
+      <td class="bot-id">{{ participant.attributes.botId }}</td>
+      <td class="match-id">{{ participant.attributes.matchId }}</td>
+      <td class="created-at">{{ participant.attributes.createdAt | date }}</td>
+      <td class="updated-at">{{ participant.attributes.updatedAt | date }}</td>
     </tr>
   </tbody>
 </table>

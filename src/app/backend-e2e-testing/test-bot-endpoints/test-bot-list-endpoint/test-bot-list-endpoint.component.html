@@ -11,6 +11,9 @@
         <td class="bot-id">{{ bot.id }}</td>
         <td class="data-type">{{ bot.type }}</td>
         <td class="bot-path">{{ bot.attributes.path }}</td>
+        <td class="bot-repository-id">{{ bot.attributes.githubRepositoryId }}</td>
+        <td class="created-at">{{ bot.attributes.createdAt | date }}</td>
+        <td class="updated-at">{{ bot.attributes.updatedAt | date }}</td>
       </tr>
     </tbody>
   </table>

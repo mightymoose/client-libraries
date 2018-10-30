@@ -15,6 +15,18 @@ export class TestMatchInstanceListEndpoint {
         return await $$('.match-instance-token').getText();
     }
 
+    static async matchIDs() {
+        return await $$('.match-id').getText();
+    }
+
+    static async createdAt() {
+        return await $$('.created-at').getText();
+    }
+
+    static async updatedAt() {
+        return await $$('.updated-at').getText();
+    }
+
     static async load() {
         await TestMatchInstanceEndpoints.load();
         await TestMatchInstanceEndpoints.testMatchInstanceListEndpointLink.click();

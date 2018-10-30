@@ -1,9 +1,12 @@
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>ID</th>
+      <th>Type</th>
+      <th>Token</th>
+      <th>Match ID</th>
+      <th>Created At</th>
+      <th>Updated At</th>
     </tr>
   </thead>
   <tbody>
@@ -11,6 +14,9 @@
       <td class='match-instance-id'>{{matchInstance.id}}</td>
       <td class='data-type'>{{matchInstance.type}}</td>
       <td class='match-instance-token'>{{matchInstance.attributes.matchInstanceToken}}</td>
+      <td class='match-id'>{{matchInstance.attributes.matchId}}</td>
+      <td class='created-at'>{{matchInstance.attributes.createdAt | date}}</td>
+      <td class='updated-at'>{{matchInstance.attributes.updatedAt | date}}</td>
     </tr>
   </tbody>
 </table>
