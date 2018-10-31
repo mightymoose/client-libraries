@@ -89,7 +89,6 @@ export interface BackendMatchParticipationAttributes {
     readonly matchId:   number;
     readonly createdAt: string;
     readonly updatedAt: string;
-    readonly token:     string;
 }
 
 export type BackendMatchParticipation = JSONAPIResourceObject<'match_participation', BackendMatchParticipationAttributes, never>;
@@ -116,7 +115,6 @@ export type BackendRockPaperScissorsRoundResponse =
     JSONAPIResponse<'rock_paper_scissors_rounds', BackendRockPaperScissorsRoundAttributes, never>;
 
 export interface BackendMatchInstanceAttributes {
-    readonly token:     string;
     readonly matchId:   number;
     readonly createdAt: string;
     readonly updatedAt: string;

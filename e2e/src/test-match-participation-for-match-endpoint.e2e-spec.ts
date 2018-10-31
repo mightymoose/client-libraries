@@ -31,8 +31,4 @@ describe('the match participation for match endpoint', () => {
         expect(updatedAt).toEqual([ 'Apr 15, 1707', 'Apr 15, 1707' ]);
     });
 
-    it('returns tokens for the participants', async () => {
-        const tokens = await TestMatchParticipationForMatchEndpoint.tokens();
-        expect(tokens).toEqual(['participation token #a1', 'participation token #b1']);
-    });
 });

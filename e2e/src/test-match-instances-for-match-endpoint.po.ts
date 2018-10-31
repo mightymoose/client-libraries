@@ -11,10 +11,6 @@ export class TestMatchInstancesForMatchEndpoint {
         return await $$('.data-type').getText();
     }
 
-    static async tokens() {
-        return await $$('.match-instance-token').getText();
-    }
-
     static async matchIDs() {
         return await $$('.match-id').getText();
     }

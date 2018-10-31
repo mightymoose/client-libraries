@@ -36,37 +36,6 @@ describe('the match instance for matches endpoint', () => {
         ]);
     });
 
-    it('includes the match tokens', async () => {
-        const matchTokens = await TestMatchInstancesForMatchEndpoint.tokens();
-        expect(matchTokens).toEqual([
-            'match 1 token',
-            'match 4 token',
-            'match 7 token',
-            'match 10 token',
-            'match 13 token',
-            'match 16 token',
-            'match 19 token',
-            'match 22 token',
-            'match 25 token',
-            'match 28 token',
-            'match 31 token',
-            'match 34 token',
-            'match 37 token',
-            'match 40 token',
-            'match 43 token',
-            'match 46 token',
-            'match 49 token',
-            'match 52 token',
-            'match 55 token',
-            'match 58 token',
-            'match 61 token',
-            'match 64 token',
-            'match 67 token',
-            'match 70 token',
-            'match 73 token'
-        ]);
-    });
-
     it('includes the data types', async () => {
         const dataTypes = await TestMatchInstancesForMatchEndpoint.dataTypes();
         expect(dataTypes).toEqual([

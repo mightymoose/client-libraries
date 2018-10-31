@@ -15,10 +15,6 @@ export class TestMostRecentInstanceForMatchEndpoint {
         return await $('.data-type').getText();
     }
 
-    static async token() {
-        return await $('.match-instance-token').getText();
-    }
-
     static async matchID() {
         return await $('.match-id').getText();
     }

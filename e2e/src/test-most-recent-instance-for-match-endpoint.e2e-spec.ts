@@ -10,11 +10,6 @@ describe('the match instance for matches endpoint', () => {
         expect(matchInstanceID).toEqual('99');
     });
 
-    it('includes the match token', async () => {
-        const matchToken = await TestMostRecentInstanceForMatchEndpoint.token();
-        expect(matchToken).toEqual('match 99 token');
-    });
-
     it('includes the data types', async () => {
         const dataType = await TestMostRecentInstanceForMatchEndpoint.dataType();
         expect(dataType).toEqual('match_instances');

@@ -161,34 +161,4 @@ describe('the match participation list endpoint', () => {
         ]);
     });
 
-    it('returns tokens for the participants', async () => {
-        const tokens = await TestMatchParticipationListEndpoint.tokens();
-        expect(tokens).toEqual([
-            'participation token #a1',
-            'participation token #b1',
-            'participation token #a2',
-            'participation token #b2',
-            'participation token #a3',
-            'participation token #b3',
-            'participation token #a4',
-            'participation token #b4',
-            'participation token #a5',
-            'participation token #b5',
-            'participation token #a6',
-            'participation token #b6',
-            'participation token #a7',
-            'participation token #b7',
-            'participation token #a8',
-            'participation token #b8',
-            'participation token #a9',
-            'participation token #b9',
-            'participation token #a10',
-            'participation token #b10',
-            'participation token #a11',
-            'participation token #b11',
-            'participation token #a12',
-            'participation token #b12',
-            'participation token #a13'
-        ]);
-    });
 });
